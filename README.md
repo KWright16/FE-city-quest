@@ -62,5 +62,5 @@ The back end can be found on heroku at https://city-quest-game.herokuapp.com/api
 ## Links
 
 Font end admin webpage built using react:
-https://github.com/KWright16/FE-city-quest-admin
+https://github.com/KWright16/FE-CQ-admin
 
