@@ -18,7 +18,19 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Prerequisites
 
-You will need to download the expo app to run the game locally on a phone.
+You will need to download the expo app to run the game locally on a phone and you will need a firebase cloud storage database. Once you have set up the database, you will need to set up a config file in the following format; to do this create a file called firebase.js within the city-quest directory. Copy in the following code, inserting the keys from your database where neccessary.
+
+```
+export default firebaseConfig = {
+ apiKey: "insert your key here",
+ authDomain: "insert domain here",
+ databaseURL: "insert url here",
+ projectId: "insert project id",
+ storageBucket: "insert project bucket here",
+ messagingSenderId: "insert sender id here"
+};
+```
+
 You will also need to install the prerequisites for running and testing the application by running the following on the command line.
 
 ```
