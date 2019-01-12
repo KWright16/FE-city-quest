@@ -13,15 +13,7 @@ import * as firebase from "firebase";
 import * as api from "../api";
 import { KeyboardAwareScrollView } from "react-native-keyboard-aware-scroll-view";
 import { AntDesign } from "@expo/vector-icons";
-
-const firebaseConfig = {
-  apiKey: "AIzaSyCNArqiZbX3ChYKYMEeGLom-ieH-yk6Jvg",
-  authDomain: "treasure-hunt-dcd8e.firebaseapp.com",
-  databaseURL: "https://treasure-hunt-dcd8e.firebaseio.com",
-  projectId: "treasure-hunt-dcd8e",
-  storageBucket: "treasure-hunt-dcd8e.appspot.com",
-  messagingSenderId: "382195712102"
-};
+import firebaseConfig from "../firebase"
 
 firebase.initializeApp(firebaseConfig);
 
@@ -135,7 +127,7 @@ class QuestionScreen extends React.Component {
             {image && (
               <Image
                 source={{ uri: image }}
-                style={{ width: 200, height: 200, margin: 10, borderRadius: 9}}
+                style={{ width: 200, height: 200, margin: 10, borderRadius: 9 }}
               />
             )}
             {analysing && <ActivityIndicator size="large" color="#8360c3" />}
@@ -227,10 +219,10 @@ class QuestionScreen extends React.Component {
     const { playerName, progress } = this.state;
     const blob = await new Promise((resolve, reject) => {
       const xhr = new XMLHttpRequest();
-      xhr.onload = function() {
+      xhr.onload = function () {
         resolve(xhr.response);
       };
-      xhr.onerror = function(e) {
+      xhr.onerror = function (e) {
         console.log(e);
         reject(new TypeError("Network request failed"));
       };
